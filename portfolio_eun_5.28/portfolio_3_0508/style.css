@@ -6,6 +6,7 @@ body {
   color: #7c7877;
   margin: 0;
   padding: 0;
+  background-color: rgb(37, 37, 37);
 }
 /* .body__padding 클래스들에게 일괄적으로 패딩적용하기 */
 .body__padding {
@@ -26,8 +27,10 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
+  z-index: 15;
 }
 .i__scroll__child {
+  color: whitesmoke;
   width: fit-content;
 }
 .i__scroll__child p {
@@ -80,39 +83,44 @@ body {
   padding: 0;
   border: 0;
 }
-.bg__img {
-  width: 100vw;
-  height: 100%;
-  position: fixed;
-  background-image: url("images/bg_img.png");
-  /* filter: brightness(30%); */
-  z-index: 10;
-}
 /* bg_img 블러애니메이션 */
 .blurrr {
   animation: blurdarken 2s ease forwards;
 }
 @keyframes blurdarken {
   0% {
-    transform: scale(1.1);
+    transform: scale(1);
     -webkit-filter: blur(0px) brightness(100%);
     z-index: 10;
   }
-  50% {
-    transform: scale(1.2);
+  20% {
+    transform: scale(1.1);
     -webkit-filter: blur(5px) brightness(110%);
   }
   100% {
-    transform: scale(1.1);
-    -webkit-filter: blur(0px) brightness(50%);
+    transform: scale(1);
+    -webkit-filter: blur(0px) brightness(50%) contrast(200%) grayscale(100%);
     z-index: -1;
   }
 }
 /* HOME */
 .home {
-  /* background-color: #abd0ce; */
+  max-height: 900px;
+  /* background-color: black; */
   align-items: center;
   color: white;
+  /* height: fit-content; */
+}
+.bg__img {
+  height: fit-content;
+  position: fixed;
+  background-image: url("images/effel.png");
+  /* filter: brightness(30%); */
+  /* z-index: 10; */
+  z-index: 10;
+}
+.bg__img img {
+  width: 100vw;
 }
 .navbar {
   /* background-color: red; */
@@ -138,29 +146,35 @@ body {
 .li__skills:hover,
 .li__works:hover {
   cursor: pointer;
-  background-color: #f0e5de;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
 }
 .navbar li a {
   padding: 0;
   margin: 0;
   padding-left: 1vw;
   padding-right: 1vw;
-  color: white;
+  color: whitesmoke;
   font-size: 2.5vw;
   font-weight: 600;
   text-decoration: none;
-}
-.navbar li a:hover {
-  color: #7c7877;
 }
 
 .baseline {
   margin: 0;
   padding: 0;
-  background-color: #f0e5de;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
   height: 2px;
   border: none;
-  animation: fadeIn 4s ease 1s;
 }
 .home__logo {
   /* background-color: blacsk; */
@@ -173,16 +187,14 @@ body {
 .home__logo img {
   width: 30vw;
   /* animation: myswing 0.8s ease 1.8s; */
-  animation: fadeIn 4s ease 1s;
 }
 .i__click {
   display: inline;
   position: absolute;
-  transform: translate(30%, -150%);
-  animation: flashing 1s ease infinite;
+  transform: translate(15vw, -5vh);
 }
 .i__click img {
-  width: 5vw;
+  width: 2vw;
 }
 .contact {
   right: 1vw;
@@ -222,6 +234,12 @@ body {
   border-radius: 5px;
   border: 0.1vw solid #7c7877;
   animation: aniglow 2s ease infinite;
+  z-index: 16;
+}
+
+.contact button:hover {
+  color: rgb(37, 37, 37);
+  background-color: whitesmoke;
 }
 
 /* @keyframes aniglow {
@@ -237,13 +255,13 @@ body {
 } */
 @keyframes aniglow {
   0% {
-    box-shadow: #ffffff 0 0 10px 0px, #ffffff 0 0 15px 0;
+    box-shadow: #ffffff 0 0 5px 0px, #ffffff 0 0 5px 0;
   }
   50% {
     box-shadow: none;
   }
   100% {
-    box-shadow: #ffffff 0 0 10px 0px, #ffffff 0 0 15px 0;
+    box-shadow: #ffffff 0 0 5px 0px, #ffffff 0 0 5px 0;
   }
 }
 
@@ -262,7 +280,10 @@ body {
   flex-flow: column;
 }
 .aboutme__header {
-  background-color: #f0e5de;
+  background-color: rgb(37, 37, 37);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  z-index: 5;
 }
 .aboutme__navbar {
   margin: 0;
@@ -274,17 +295,25 @@ body {
   align-items: center;
 }
 .aboutme__navbar li {
+  visibility: hidden;
   list-style: none;
 }
 
 .aboutme__navbar a {
   text-decoration: none;
-  color: #7c7877;
-}
-.aboutme__navbar a {
+  color: whitesmoke;
   font-size: 3vw;
 }
-
+.aboutme__navbar a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .aboutme__navbar .first__a {
   font-size: 5vw;
   font-weight: bolder;
@@ -292,7 +321,7 @@ body {
 
 .aboutme__body {
   box-sizing: border-box;
-  background-color: white;
+  background-color: whitesmoke;
   width: 100vw;
   height: 70vh;
   display: flex;
@@ -307,9 +336,10 @@ body {
   align-items: center;
 }
 .aboutme__mypic {
+  visibility: hidden;
   margin: 0;
   padding: 0;
-  background-color: #f0e5de;
+  background-color: rgb(195, 195, 195);
   width: 25vw;
   min-width: 150px;
   min-height: 150px;
@@ -327,7 +357,8 @@ body {
   left: -1vw;
   z-index: 4;
 }
-.about__text {
+.aboutme__text {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   max-width: 50vw;
@@ -356,21 +387,24 @@ body {
   margin-right: 2vw;
 }
 .aboutme__footer {
-  background-color: #f0e5de;
+  background-color: rgb(37, 37, 37);
   width: 100vw;
   height: 15vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  z-index: 5;
 }
 /* SKILLS */
 .skills {
-  background-color: #abd0ce;
+  background-color: rgb(37, 37, 37);
 }
 /* WORKS */
 .works {
-  background-color: #f0e5de;
+  background-color: whitesmoke;
 }
 /* ETC */
 .etc {
-  background-color: #abd0ce;
+  background-color: rgb(37, 37, 37);
 }
 
 /* footer */
@@ -387,5 +421,4 @@ footer {
 }
 .scrollDown {
   cursor: default;
-  animation: aniUpDown 1s ease infinite;
 }

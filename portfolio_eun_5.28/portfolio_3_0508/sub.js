@@ -26,8 +26,8 @@ window.onscroll = () => {
 };
 
 // css: onload 시 배경화면 뿌옇게 했다가 어두워지면서 z-index 낮아지도록
-function bghandler(){
-  $(".bg__img").addClass('blurrr');
+function bghandler() {
+    $(".bg__img").addClass('blurrr');
 };
 
 // $(document).ready = function(){   setTimeout(function(){     scrollTo(0,0);
@@ -130,8 +130,8 @@ function moveScreen() {
 }
 
 // Etc.(마지막 페이지) 클릭 시 스크롤 아이콘 및 메세지 변경 $('a:contains("Etc.")').on('click', ()=>{
-// alert($(this).text());   if($(this).val() == "Etc."){     alert("Etc. 클릭");
-// } });
+// alert($(this).text());   if($(this).val() == "Etc."){     alert("Etc. 클릭"); }
+// });
 $('a:contains("Etc")').on('click', () => {
     let scrollIcon = $(".i__scroll i");
     console.log("마지막 페이지입니다.");
@@ -179,8 +179,7 @@ $(".home__logo").on('click', () => {
 // pointer;");     console.log($(this).text()+"출력완");   });
 // $(this).trigger('click');   console.log($(this)); }); $(".contact
 // button").on("click", () => { }); $(".contact button").each(function(index){
-// console.log($(this).on("click", () => {
-// console.log($(this).next().text());
+// console.log($(this).on("click", () => { console.log($(this).next().text());
 // copyToClipboard($(this).next().text());     document.execCommand('copy');
 // alert( '클립보드에 복사 되었습니다.' );   })); }); function copyToClipboard(element) {
 // $(element).next().text().   document.execCommand("copy");    $temp.remove();
@@ -197,3 +196,49 @@ $('.contact button').on('click', function (e) {
     document.execCommand('copy');
     alert("클립보드에 복사되었습니다.");
 });
+
+window.onscroll = () => {
+    moveTop = $(window).scrollTop();
+    // 전체 document 상에서 해당 객체의 top 값(top 라인의 위치값)을 반환 스크롤이 내려가면서 about 영역에 진입했을 경우.
+    let aboutTop = $("#aboutme")
+    .offset()
+    .top;
+    console.log("moveTop: "+moveTop+", aboutTop: "+aboutTop);
+    if (moveTop >= aboutTop) {
+      console.log("aboutme 창 진입");
+        doVisible($(".aboutme__navbar li"));
+        doVisible($(".aboutme__mypic"));
+        doVisible($(".aboutme__text"));
+        $(".aboutme__navbar li").css("animation", "fadeInUp 1s ease");
+        $(".aboutme__mypic").css("animation", "fadeInLeft 1s ease");
+        $(".aboutme__text").css("animation", "fadeInRight 1s ease");
+        // $(".i__scroll__child").css("color","whitesmoke");
+        // colorChange($(".i__scroll__child"), "whitesmoke");
+    }
+
+};
+
+function doHidden(tag) {
+    // $(tag).css("visibility", "hidden"); $(tag).css("opacity", 0);
+    // $(tag).css("transition", "1s ease"); $(tag).css("transitionProperty",
+    // "visibility, opacity");
+    tag.css("visibility", "hidden");
+    tag.css("opacity", 0);
+    tag.css("transition", "1s ease");
+    tag.css("transitionProperty", "visibility, opacity");
+};
+function doVisible(tag) {
+    // $(tag).css("visibility", "visible"); $(tag).css("opacity", 1);
+    // $(tag).css("transition", "1s ease"); $(tag).css("transitionProperty",
+    // "visibility, opacity");
+    tag.css("visibility", "visible");
+    tag.css("opacity", 1);
+    tag.css("transition", "1s ease");
+    tag.css("transitionProperty", "visibility, opacity");
+  };
+  
+function colorChange(tag, color){
+  tag.css("transition", "3s ease");
+  tag.css("transitionProperty", "color");
+  tag.css("color",color);
+};
