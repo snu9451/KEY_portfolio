@@ -1,0 +1,247 @@
+* {
+  /* font-family: "MS Reference Sans Serif"; */
+  font-family: "Open Sans";
+  color: #7c7877;
+}
+
+body {
+  font-size: 1.2rem;
+  height: 100vh;
+  margin: 0;
+}
+/* .entire {
+  height: 100%;
+} */
+.myheader {
+  position: absolute;
+  text-align: right;
+  top: 0;
+  background-color: #abd0ce;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+}
+
+.myheader img {
+  height: 200px;
+  z-index: 2;
+}
+
+.fa-caret-square-down:hover {
+  color: black;
+}
+
+.dropmenu__button {
+  display: flex;
+  right: 1%;
+  text-align: right;
+  position: absolute;
+  top: 205px;
+  animation: fadeInLeft 2s ease;
+}
+.info {
+  margin: 0 10px 0 0;
+}
+.menulist {
+  display: grid;
+  grid-template-columns: 110px 110px 110px 110px 110px;
+  /* 세로 중앙 배치 */
+  align-items: center;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1%;
+  text-align: center;
+  z-index: 10;
+  background-color: rgb(240, 229, 222, 0.5);
+  height: 0;
+  width: auto;
+  overflow: hidden;
+  transition: height 0.4s;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  -o-transition: height 0.4s;
+}
+.menulist > li {
+  text-align: center;
+  font-size: inherit;
+  height: fit-content;
+  margin: 5px;
+  width: 100px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.fa-caret-square-down:hover .menulist {
+  height: 40px;
+}
+
+.menulist a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menulist > li:hover {
+  color: #7c7877;
+  font-weight: bolder;
+}
+
+.far.fa-caret-square-down {
+  margin: 0;
+}
+
+.logo {
+  margin-left: 25px;
+  text-align: left;
+  line-height: 20px;
+  position: absolute;
+  top: 140px;
+  z-index: 10;
+}
+
+.logo > .lastname {
+  animation: fadeInDown 2s ease;
+}
+.logo > .firstname {
+  opacity: 0;
+  animation: fadeInDown 2s ease 0.4s;
+  /* 애니메이션이 끝난 후에 마지막 프레임 상태를 유지 */
+  animation-fill-mode: forwards;
+}
+.logo > .dvlpr {
+  line-height: 40px;
+  font-weight: lighter;
+  opacity: 0;
+  animation: fadeInUp 2s ease 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.main__area {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+
+.avatar {
+  position: absolute;
+  top: 31%;
+  width: 500px;
+  height: fit-content;
+}
+.avatar > p {
+  font-size: 12px;
+  animation: easeflash 1.5s ease infinite;
+}
+@keyframes easeflash {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.avatar > img {
+  background-color: white;
+  width: 40vh;
+  border-radius: 50%;
+  border: 2px solid #7c7877;
+  animation: fadeIn 4s ease;
+}
+
+.avatar img:hover {
+  cursor: pointer;
+}
+
+.java__logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.java__logo img {
+  width: 35vw;
+  overflow: hidden;
+  animation: fadeInRight 2s ease forwards;
+}
+
+.contact {
+  position: absolute;
+  top: 83%;
+  display: flex;
+  justify-content: center;
+  animation: fadeInDown 2s ease;
+}
+
+.email__button,
+.hp__button,
+.pcontact {
+  font-family: inherit;
+  font-size: 3vh;
+  margin: 0 10px 0 0;
+  border-radius: 10%;
+  border: none;
+  width: auto;
+}
+.email__button,
+.hp__button {
+  background-color: #f0e5de;
+}
+
+.email__button:hover,
+.hp__button:hover {
+  background-color: #7c7877;
+  color: #f0e5de;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.scroll__down {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 87%;
+  animation: upANDdown 1s ease infinite;
+}
+.scroll__down > p {
+  font-size: 14px;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: -5px;
+}
+.fas.fa-angle-down {
+  font-size: 25px;
+}
+
+/* 스크롤 아이콘의 업다운 애니메이션 */
+@keyframes upANDdown {
+  0% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+.about__area {
+  background-color: #f0e5de;
+  position: relative;
+  visibility: hidden;
+  top: -100%;
+  height: inherit;
+}
+.about__area > h1 {
+  margin: 0;
+  padding: 0;
+}

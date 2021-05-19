@@ -1,0 +1,14 @@
+1. 구글폰트
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+2. Font Awesome
+<script src="https://kit.fontawesome.com/aa4e385726.js" crossorigin="anonymous"></script>
+
+3. SVG to PNG 변환
+https://svgtopng.com/
+
+4. 구글 컬러피커(Color Picker)
+https://www.google.co.kr/search?q=color+picker&source=hp&ei=giyGYIyiDuW4mAXG-6yoDQ&iflsig=AINFCbYAAAAAYIY6klSM8Qu1NhMrZmBI5Op7p9b70qHi&oq=color+picker&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAELEDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAOggIABCxAxCDAToHCAAQsQMQCjoECAAQClD8AViiFGC0FWgCcAB4AIABnwGIAZ0OkgEEMC4xNJgBAKABAaoBB2d3cy13aXo&sclient=gws-wiz&ved=0ahUKEwiM65il9ZrwAhVlHKYKHcY9C9UQ4dUDCAc&uact=5
+
+5. 

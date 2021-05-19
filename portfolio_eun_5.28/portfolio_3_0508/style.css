@@ -1,0 +1,391 @@
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #7c7877;
+  margin: 0;
+  padding: 0;
+}
+/* .body__padding 클래스들에게 일괄적으로 패딩적용하기 */
+.body__padding {
+  box-sizing: border-box;
+  padding: 2vw 15vw;
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+}
+.i__scroll {
+  /* background-color: yellow; */
+  position: fixed;
+  top: 90vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.i__scroll__child {
+  width: fit-content;
+}
+.i__scroll__child p {
+  width: fit-content;
+  font-size: 2vh;
+  margin: 0;
+  padding: 0;
+}
+.i__scroll i {
+  font-size: 3vh;
+  animation: aniUpDown 0.8s ease infinite;
+}
+/* flash 애니메이션 */
+@keyframes flashing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 스크롤 안내 아이콘이 위아래로 움직이는 애니메이션 */
+@keyframes aniUpDown {
+  0% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    transform: translateY(7px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+#copytextbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.bg__img {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background-image: url("images/bg_img.png");
+  /* filter: brightness(30%); */
+  z-index: 10;
+}
+/* bg_img 블러애니메이션 */
+.blurrr {
+  animation: blurdarken 2s ease forwards;
+}
+@keyframes blurdarken {
+  0% {
+    transform: scale(1.1);
+    -webkit-filter: blur(0px) brightness(100%);
+    z-index: 10;
+  }
+  50% {
+    transform: scale(1.2);
+    -webkit-filter: blur(5px) brightness(110%);
+  }
+  100% {
+    transform: scale(1.1);
+    -webkit-filter: blur(0px) brightness(50%);
+    z-index: -1;
+  }
+}
+/* HOME */
+.home {
+  /* background-color: #abd0ce; */
+  align-items: center;
+  color: white;
+}
+.navbar {
+  /* background-color: red; */
+  width: 59vw;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+}
+.navbar li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  /* background-color: #f0e5de; */
+  margin: 0;
+  /* background-color: aqua; */
+  list-style: none;
+}
+.li__aboutme:hover,
+.li__etc:hover,
+.li__skills:hover,
+.li__works:hover {
+  cursor: pointer;
+  background-color: #f0e5de;
+}
+.navbar li a {
+  padding: 0;
+  margin: 0;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: white;
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar li a:hover {
+  color: #7c7877;
+}
+
+.baseline {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e5de;
+  height: 2px;
+  border: none;
+  animation: fadeIn 4s ease 1s;
+}
+.home__logo {
+  /* background-color: blacsk; */
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.home__logo:hover {
+  cursor: pointer;
+}
+.home__logo img {
+  width: 30vw;
+  /* animation: myswing 0.8s ease 1.8s; */
+  animation: fadeIn 4s ease 1s;
+}
+.i__click {
+  display: inline;
+  position: absolute;
+  transform: translate(30%, -150%);
+  animation: flashing 1s ease infinite;
+}
+.i__click img {
+  width: 5vw;
+}
+.contact {
+  right: 1vw;
+  bottom: 1vh;
+  position: absolute;
+  /* background-color: yellow; */
+  text-align: center;
+  /* z-index: 1; */
+}
+/* 연락처 */
+.contact > .title {
+  margin: 0;
+  font-size: 1.4vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  /* background-color: wheat; */
+}
+.contact > .email {
+  display: flex;
+  justify-content: left;
+}
+.contact > .phone {
+  display: flex;
+  justify-content: left;
+}
+.contact button {
+  cursor: pointer;
+  display: block;
+  font-size: 1.3vw;
+  color: white;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  margin-right: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0.1vw solid #7c7877;
+  animation: aniglow 2s ease infinite;
+}
+
+/* @keyframes aniglow {
+  0% {
+    box-shadow: #77aaad 0px 0px 25px -5px, #77aaad 0px 10px 10px -5px;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: #77aaad 0px 0px 25px -5px, #77aaad 0px 10px 10px -5px;
+  }
+} */
+@keyframes aniglow {
+  0% {
+    box-shadow: #ffffff 0 0 10px 0px, #ffffff 0 0 15px 0;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: #ffffff 0 0 10px 0px, #ffffff 0 0 15px 0;
+  }
+}
+
+.contact > .email p {
+  margin: 1vh 0 0;
+  /* margin-bottom: 1vh; */
+  font-size: 1.2vw;
+}
+.contact > .phone p {
+  margin: 1vh 0 0;
+  /* margin-bottom: 1vh; */
+  font-size: 1.2vw;
+}
+/* ABOUT ME */
+.aboutme {
+  flex-flow: column;
+}
+.aboutme__header {
+  background-color: #f0e5de;
+}
+.aboutme__navbar {
+  margin: 0;
+  padding: 0;
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.aboutme__navbar li {
+  list-style: none;
+}
+
+.aboutme__navbar a {
+  text-decoration: none;
+  color: #7c7877;
+}
+.aboutme__navbar a {
+  font-size: 3vw;
+}
+
+.aboutme__navbar .first__a {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.aboutme__body {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme__mypic_and_mytext {
+  min-width: 84vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.aboutme__mypic {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e5de;
+  width: 25vw;
+  min-width: 150px;
+  min-height: 150px;
+  height: 25vw;
+  position: relative;
+  margin: 20px;
+  z-index: 5;
+}
+.aboutme__mypic img {
+  min-width: 150px;
+  min-height: 150px;
+  width: 25vw;
+  position: absolute;
+  top: -1vw;
+  left: -1vw;
+  z-index: 4;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  min-width: 300px;
+}
+.aboutme_history {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2vw;
+}
+.aboutme_history > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+.aboutme_history > div > p {
+  min-width: 200px;
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+.aboutme__footer {
+  background-color: #f0e5de;
+  width: 100vw;
+  height: 15vh;
+}
+/* SKILLS */
+.skills {
+  background-color: #abd0ce;
+}
+/* WORKS */
+.works {
+  background-color: #f0e5de;
+}
+/* ETC */
+.etc {
+  background-color: #abd0ce;
+}
+
+/* footer */
+footer {
+  width: 100vw;
+  height: 15vh;
+  background-color: white;
+  z-index: 10;
+}
+
+/* /////////////속성클래스///////////// */
+.gotoUp {
+  cursor: pointer;
+}
+.scrollDown {
+  cursor: default;
+  animation: aniUpDown 1s ease infinite;
+}

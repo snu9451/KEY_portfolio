@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>김은영 포트폴리오</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="anim.css">
+        <script src="https://kit.fontawesome.com/aa4e385726.js" crossorigin="anonymous"></script>
+        <script src="main.js" defer="defer"></script>
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="sub.js" defer="defer"></script>
+    </head>
+    <body>
+        <!-- 스크롤값을 확인하기 위한 임시 태그 -->
+        <!-- <span class="scrollNumCheck" style="position:fixed; width:100vw;
+        text-align: center;">스크롤 수</span> -->
+        <!-- Home -->
+        <div class="bg__img"></div>
+        <section class="content home" id="home">
+            <input id="copytextbox"/>
+            <div class="i__click">
+                <img src="images/i_click.png" alt="클릭">
+            </div>
+            <div class="home__logo">
+                <img src="images/home_logo.png" alt="김은영">
+            </div>
+            <!-- menu & baseline -->
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a class="li__aboutme" href="#aboutme">About Me</a>
+                    </li>
+                    <li>
+                        <a class="li__skills" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="li__works" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a class="li__etc" href="#etc">Etc.</a>
+                    </li>
+                </ul>
+                <!-- <ul> <li class="li__aboutme"> <p name="aboutme">AboutMe</p> </li> <li
+                class="li__skills"> <p name="skills">Skills</p> </li> <li class="li__works"> <p
+                name="works">Works</p> </li> <li class="li__etc"> <p name="etc">Etc.</p> </li>
+                </ul> -->
+                <hr class="baseline">
+            </div>
+            <!-- contact -->
+            <div class="contact">
+                <p class="title">CONTACT</p>
+                <div class="email">
+                    <button>E-Mail</button>
+                    <p class="pcopy">snu9451@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <button>Phone</button>
+                    <p class="pcopy">+82 10-8082-8353</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- AboutMe -->
+        <section class="content aboutme" id="aboutme">
+            <div class="aboutme__header">
+                <ul class="aboutme__navbar">
+                    <li>
+                        <a class="first__a" href="#aboutme">About Me</a>
+                    </li>
+                    <li>
+                        <a class="second__a" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="third__a" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a class="fourth__a" href="#etc">Etc.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="aboutme__body body__padding">
+                <div class="aboutme__mypic_and_mytext">
+                    <div class="aboutme__mypic">
+                        <img src="images/mypic.jpg" alt="mypic">
+                    </div>
+                    <div class="about__text" style="z-index: 5;">
+                        <p style="margin:0; font-size: 1.5vw; line-height: 3vw;">
+                            <b>안녕하세요. 저는 김은영입니다.</b><br>
+                            Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er
+                            hat Wurzeln aus der Lateinischen<br>
+                            Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock,
+                            ein Lateinprofessor des Hampden-Sydney
+                            <br>
+                            College in Virgnia untersuche einige undeutliche Worte, "consectetur", einer
+                            Lorem Ipsum Passage und fand eine Zeile der Sektion 1.10.32.
+                        </p>
+                        <div class="aboutme_history">
+                          <div class="kosmo">
+                            <img src="images/kosmo_logo.png" alt="코스모로고" style="height: 3vw;">
+                            <p>한국소프트웨어인재개발원 수료<br>2021. 02. 03 ~ 2021. 08. 04</p>
+                          </div>
+                          <div class="univ">
+                            <img src="images/symbol-mark.png" alt="학교로고" style="height: 3vw;">
+                            <p>이화여자대학교 졸업<br>2015. 03 ~ 2021. 08</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutme__footer"></div>
+        </section>
+        <!-- Skills -->
+        <section class="content skills" id="skills">Skills
+
+        </section>
+        <!-- Works -->
+        <section class="content works" id="works">Works
+
+        </section>
+        <!-- Etc. -->
+        <section class="content etc" id="etc">Etc.
+
+        </section>
+        <!-- scroll > infinite motion -->
+        <div class="i__scroll">
+          <div class="i__scroll__child">
+            <p>아래로 스크롤</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+        <footer>
+
+        </footer>
+    </body>
+</html>

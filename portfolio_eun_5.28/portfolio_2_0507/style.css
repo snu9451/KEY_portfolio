@@ -1,0 +1,167 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #7c7877;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.i__scroll {
+  /* background-color: yellow; */
+  position: fixed;
+  top: 90vh;
+  width: 100vw;
+  text-align: center;
+}
+.i__scroll p {
+  font-size: 2vh;
+  margin: 0;
+  padding: 0;
+}
+.i__scroll i {
+  font-size: 3vh;
+  animation: aniUpDown 0.8s ease infinite;
+}
+/* 스크롤 안내 아이콘이 위아래로 움직이는 애니메이션 */
+@keyframes aniUpDown {
+  0% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    transform: translateY(7px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+/* HOME */
+.home {
+  background-color: #abd0ce;
+}
+.navbar {
+  /* background-color: red; */
+  width: 59vw;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  /* background-color: #f0e5de; */
+  margin: 0;
+  /* background-color: aqua; */
+  list-style: none;
+}
+/* 테스트용///////////////////////////////////// */
+/* hover로 변경해야 함 */
+.li__aboutme:hover,
+.li__skills:hover,
+.li__works:hover,
+.li__etc:hover {
+  background-color: #f0e5de;
+}
+/* //////////////////////////////////////////// */
+.navbar li a {
+  color: #7c7877;
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-decoration: none;
+}
+.baseline {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e5de;
+  height: 2px;
+  border: none;
+}
+.home__logo {
+  /* background-color: blacsk; */
+  padding-left: 5vw;
+  padding-right: 1vw;
+}
+.home__logo img {
+  width: 30vw;
+}
+.i__click {
+  /* background-color: aquamarine; */
+  display: inline;
+
+  position: absolute;
+  transform: translate(60%, -150%);
+}
+.i__click img {
+  width: 5vw;
+}
+.contact {
+  right: 1vw;
+  bottom: 1vh;
+  position: absolute;
+  /* background-color: yellow; */
+  text-align: center;
+}
+/* 연락처 */
+.contact > .title {
+  margin: 0;
+  font-size: 1.4vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  /* background-color: wheat; */
+}
+.contact > .email {
+  display: flex;
+  justify-content: left;
+}
+.contact > .phone {
+  display: flex;
+  justify-content: left;
+}
+.contact button {
+  display: block;
+  font-size: 1.3vw;
+  color: #7c7877;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  margin-right: 1vw;
+  margin-bottom: 2vh;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0.1vw solid #7c7877;
+}
+.contact > .email p {
+  margin: 0;
+}
+.contact > .phone p {
+  margin: 0;
+}
+/* ABOUT ME */
+.aboutme {
+  background-color: #f0e5de;
+}
+/* SKILLS */
+.skills {
+  background-color: #abd0ce;
+}
+/* WORKS */
+.works {
+  background-color: #f0e5de;
+}
+/* ETC */
+.etc {
+  background-color: #abd0ce;
+}
