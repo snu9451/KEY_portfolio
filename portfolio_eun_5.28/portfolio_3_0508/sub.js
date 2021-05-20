@@ -121,11 +121,13 @@ function moveScreen() {
         console.log("마지막 페이지입니다.");
         $(".i__scroll p").text("맨 위로 올라가기");
         scrollIcon.attr("class", "fas fa-angle-double-up");
+        // $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
         // 무한 반짝임 구현 function loop(){   scrollIcon     .animate({opacity:0}, 400)
         // .animate({opacity:1}, 400, loop); }; loop();
     } else {
         $(".i__scroll p").text("아래로 스크롤");
         $(".i__scroll i").attr("class", "fas fa-angle-down");
+        // $(".i__scroll__child").css("color", "whitesmoke");
     }
 }
 
@@ -140,11 +142,21 @@ $('a:contains("Etc")').on('click', () => {
     // alert($('a:contains("Etc")').text());
 });
 
+$(".i__scroll__child").on('mouseout', () => {
+    console.log("마우스 나가요");
+    $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
+});
+
 $(".i__scroll__child").on('mouseover', () => {
     if ($(".i__scroll__child p").text() == "맨 위로 올라가기") {
         // 이미 i__scroll이라는 클래스 이름을 가지고 있지만 클래스 이름을 더 추가할 수 있다. 이렇게하면 공백으로 분리되어
         // class="i__scroll gotoUp"이 되고 css 속성을 추가로 가질 수 있게 됨.
-        $(".i__scroll__child").addClass("gotoUp");
+        $(".i__scroll__child")
+            .addClass("gotoUp")
+            .css("color", "rgb(206, 0, 144)");
+        $(".i__scroll__child")
+            .css("transition", "0.3s ease-in")
+            .css("transitionProperty", "color");
         console.log($(".i__scroll__child").attr("class"));
         // $(".i__scroll").css("cursor", "pointer");
         $(".i__scroll__child").on('click', () => {
@@ -156,7 +168,8 @@ $(".i__scroll__child").on('mouseover', () => {
         // gotoUp css속성클래스 제거
             .removeClass("gotoUp")
             // 클릭이벤트에 해당하는 이벤트리스너 제거
-            .off('click');
+            .off('click')
+            .css("color", "whitesmoke");
     }
 });
 
@@ -201,11 +214,12 @@ window.onscroll = () => {
     moveTop = $(window).scrollTop();
     // 전체 document 상에서 해당 객체의 top 값(top 라인의 위치값)을 반환 스크롤이 내려가면서 about 영역에 진입했을 경우.
     let aboutTop = $("#aboutme")
-    .offset()
-    .top;
-    console.log("moveTop: "+moveTop+", aboutTop: "+aboutTop);
+        .offset()
+        .top;
+    $(".i__scroll__child").css("color","whitesmoke");
+    console.log("moveTop: " + moveTop + ", aboutTop: " + aboutTop);
     if (moveTop >= aboutTop) {
-      console.log("aboutme 창 진입");
+        console.log("aboutme 창 진입");
         doVisible($(".aboutme__navbar li"));
         doVisible($(".aboutme__mypic"));
         doVisible($(".aboutme__text"));
@@ -215,7 +229,10 @@ window.onscroll = () => {
         // $(".i__scroll__child").css("color","whitesmoke");
         // colorChange($(".i__scroll__child"), "whitesmoke");
     }
-
+    if (moveTop >= 2924){
+      console.log("마지막 페이지");
+      $(".i__scroll__child").css("color","rgb(37, 37, 37");
+    }
 };
 
 function doHidden(tag) {
@@ -235,10 +252,10 @@ function doVisible(tag) {
     tag.css("opacity", 1);
     tag.css("transition", "1s ease");
     tag.css("transitionProperty", "visibility, opacity");
-  };
-  
-function colorChange(tag, color){
-  tag.css("transition", "3s ease");
-  tag.css("transitionProperty", "color");
-  tag.css("color",color);
+};
+
+function colorChange(tag, color) {
+    tag.css("transition", "3s ease");
+    tag.css("transitionProperty", "color");
+    tag.css("color", color);
 };

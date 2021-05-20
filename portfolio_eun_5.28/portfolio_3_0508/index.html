@@ -28,10 +28,10 @@
                 <img src="images/effel.png" alt="에펠탑">
             </div>
             <input id="copytextbox"/>
-            <div class="i__click">
-                <img src="images/mouseclick_.gif" alt="클릭">
-            </div>
             <div class="home__logo">
+                <div class="i__click">
+                    <img src="images/mouseclick_.gif" alt="클릭">
+                </div>
                 <img src="images/main_logo.png" alt="김은영">
             </div>
             <!-- menu & baseline -->
@@ -54,11 +54,11 @@
                 class="li__skills"> <p name="skills">Skills</p> </li> <li class="li__works"> <p
                 name="works">Works</p> </li> <li class="li__etc"> <p name="etc">Etc.</p> </li>
                 </ul> -->
-                <hr class="baseline">
+                <hr class="baseline"/>
             </div>
             <!-- contact -->
             <div class="contact">
-                <p class="title">CONTACT</p>
+                <p class="title">↓ click the button to copy it</p>
                 <div class="email">
                     <button>E-Mail</button>
                     <p class="pcopy">snu9451@gmail.com</p>
@@ -68,7 +68,6 @@
                     <p class="pcopy">+82 10-8082-8353</p>
                 </div>
             </div>
-
         </section>
         <!-- AboutMe -->
         <section class="content aboutme" id="aboutme">
@@ -120,16 +119,73 @@
             <div class="aboutme__footer"></div>
         </section>
         <!-- Skills -->
-        <section class="content skills" id="skills">Skills
-
+        <section class="content skills" id="skills">
+          <div class="skills__header">
+            <ul class="skills__navbar">
+                <li>
+                    <a class="first__a" href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a class="second__a" href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a class="third__a" href="#works">Works</a>
+                </li>
+                <li>
+                    <a class="fourth__a" href="#etc">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 게이지 -->
+        <div class="skills__gauge__wrapper">
+          <div class="skills__gauge">
+            <div class="gauge-a"></div>
+            <div class="gauge-b"></div>
+            <div class="gauge-c"></div>
+            <div class="gauge-data">
+              <h1 id="percent">0%</h1>
+            </div>
+          </div>
+          </div>
         </section>
         <!-- Works -->
-        <section class="content works" id="works">Works
-
+        <section class="content works" id="works">
+          <div class="works__header">
+            <ul class="works__navbar">
+                <li>
+                    <a class="first__a" href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a class="second__a" href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a class="third__a" href="#works">Works</a>
+                </li>
+                <li>
+                    <a class="fourth__a" href="#etc">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        
         </section>
         <!-- Etc. -->
-        <section class="content etc" id="etc">Etc.
-
+        <section class="content etc" id="etc">
+          <div class="etc__header">
+            <ul class="etc__navbar">
+                <li>
+                    <a class="first__a" href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a class="second__a" href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a class="third__a" href="#works">Works</a>
+                </li>
+                <li>
+                    <a class="fourth__a" href="#etc">Etc.</a>
+                </li>
+            </ul>
+        </div>
         </section>
         <!-- scroll > infinite motion -->
         <div class="i__scroll">
@@ -138,6 +194,52 @@
                 <i class="fas fa-angle-down"></i>
             </div>
         </div>
-        <footer></footer>
+        <footer>
+            <div class="footer__wrapper">
+                <div class="footer__header">
+                    <h1 style="color: rgb(37, 37, 37); margin: 0; padding: 20px;">GET IN TOUCH!</h1>
+                </div>
+                <div class="footer__body">
+                  <div class="footer__form__wrapper">
+                    <form action="#" method="post" class="footer__form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Phone Number">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your E-Mail">
+                      </div>
+                      <div class="form-group">
+                        <textarea id="" cols="30" rows="7" class="form-control" placeholder="Comment"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" value="Send Message" class="form__submit">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <nav class="icons">
+                    <ul class="footer__ul">
+                        <li>
+                            <a target="_blank" href="mailto:snu9451@gmail.com">
+                                <i class="far fa-envelope email"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/snu9451">
+                                <i class="fab fa-github git"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="tel:+821080828353">
+                                <i class="fas fa-mobile-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     </body>
 </html>
