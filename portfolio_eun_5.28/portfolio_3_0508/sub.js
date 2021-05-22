@@ -223,11 +223,16 @@ window.onscroll = () => {
         doVisible($(".aboutme__navbar li"));
         doVisible($(".aboutme__mypic"));
         doVisible($(".aboutme__text"));
+        doVisible($(".aboutme__body h1"));
+
         $(".aboutme__navbar li").css("animation", "fadeInUp 1s ease");
         $(".aboutme__mypic").css("animation", "fadeInLeft 1s ease");
         $(".aboutme__text").css("animation", "fadeInRight 1s ease");
         // $(".i__scroll__child").css("color","whitesmoke");
         // colorChange($(".i__scroll__child"), "whitesmoke");
+    }
+    if(moveTop>=1462){
+      fillGauge();
     }
     if (moveTop >= 2924){
       console.log("마지막 페이지");
@@ -259,3 +264,22 @@ function colorChange(tag, color) {
     tag.css("transitionProperty", "color");
     tag.css("color", color);
 };
+
+
+// percent만큼 게이지가 올라가도록 이벤트 구현하는 함수
+function fillGauge(){
+      $(".percent").each((index)=>{
+        // console.log(index+$(".percent").eq(index).text());
+        // console.log($(".percent").eq(index).text().includes(prcnt));
+        // console.log(Number($(".percent").eq(index).text().substr(0,2)));
+        // 제이쿼리 객체의 텍스트 노드에 입력된 숫자를 읽어와 그만큼 게이지를 채우도록 구현
+        let percent = Number($(".percent").eq(index).text().substr(0,2));
+        let degree = percent/200;
+        // console.log(degree);
+        let str = "rotate("+degree+"turn)";
+        console.log("percent===> "+percent+", degree===> "+degree+", str===> "+str);
+        $(".gauge__c").eq(index).css("transform", str);
+        // $(".gauge__c").eq(index).css("transform", "rotate(30deg)");
+        // $(".gauge__c").eq(index).css("transform", "rotate(0.5turn)");
+      });
+}
