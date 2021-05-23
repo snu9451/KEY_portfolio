@@ -144,7 +144,11 @@ $('a:contains("Etc")').on('click', () => {
 
 $(".i__scroll__child").on('mouseout', () => {
     console.log("마우스 나가요");
-    $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
+    if ($(".i__scroll__child p").text() == "맨 위로 올라가기") {
+      $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
+    } else {
+      $(".i__scroll__child").css("color", "whitesmoke");    
+    }
 });
 
 $(".i__scroll__child").on('mouseover', () => {
@@ -216,9 +220,20 @@ window.onscroll = () => {
     let aboutTop = $("#aboutme")
         .offset()
         .top;
+    let skillsTop = $("#skills")
+    .offset()
+    .top;
+    let worksTop = $("#works")
+    .offset()
+    .top;
+    let etcTop = $("#etc")
+    .offset()
+    .top;
+    // top 값 출력해보기
+    // console.log("aboutTop: "+aboutTop+", skillsTop: "+skillsTop+", worksTop: "+worksTop+", etcTop: "+etcTop)
     $(".i__scroll__child").css("color","whitesmoke");
     console.log("moveTop: " + moveTop + ", aboutTop: " + aboutTop);
-    if (moveTop >= aboutTop) {
+    if (moveTop >= aboutTop && moveTop < skillsTop) {
         console.log("aboutme 창 진입");
         doVisible($(".aboutme__navbar li"));
         doVisible($(".aboutme__mypic"));
@@ -231,10 +246,15 @@ window.onscroll = () => {
         // $(".i__scroll__child").css("color","whitesmoke");
         // colorChange($(".i__scroll__child"), "whitesmoke");
     }
-    if(moveTop>=1462){
+    if(moveTop>=skillsTop-100 && moveTop < worksTop){
       fillGauge();
     }
-    if (moveTop >= 2924){
+    if(moveTop >= worksTop-100 && moveTop < etcTop){
+      console.log("Works창 진입");
+      doVisible($(".works__gallery"));
+      $(".works__gallery").css("animation", "fadeInUp 1s ease");
+    }
+    if (moveTop >= etcTop-100){
       console.log("마지막 페이지");
       $(".i__scroll__child").css("color","rgb(37, 37, 37");
     }
@@ -277,9 +297,20 @@ function fillGauge(){
         let degree = percent/200;
         // console.log(degree);
         let str = "rotate("+degree+"turn)";
-        console.log("percent===> "+percent+", degree===> "+degree+", str===> "+str);
+        // console.log("percent===> "+percent+", degree===> "+degree+", str===> "+str);
         $(".gauge__c").eq(index).css("transform", str);
         // $(".gauge__c").eq(index).css("transform", "rotate(30deg)");
         // $(".gauge__c").eq(index).css("transform", "rotate(0.5turn)");
       });
 }
+
+// 프로젝트 이미지에 마우스 오버 시(hover) 이벤트 구현
+$(".project__hover").each(function(index){
+  $(".project__hover").eq(index).on('mouseover', ()=>{
+    // console.log("마우스 오버"+$(".project__hover p").eq(index).text());
+    doVisible($(".project__hover p").eq(index));
+  });
+  $(".project__hover").eq(index).on('mouseout', ()=>{
+    doHidden($(".project__hover p").eq(index));
+  });
+});

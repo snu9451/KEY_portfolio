@@ -14,6 +14,10 @@ body {
   /* min-width: 500px; */
   overflow-x: hidden;
 }
+eun {
+  color: black;
+  font-weight: bolder;
+}
 /* .body__padding 클래스들에게 일괄적으로 패딩적용하기 */
 .body__padding {
   box-sizing: border-box;
@@ -310,6 +314,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .aboutme__navbar li {
   visibility: hidden;
   list-style: none;
@@ -389,8 +394,8 @@ body {
   max-width: 50vw;
   min-width: 300px;
 }
-
 .aboutme__body h1 {
+  font-family: "휴먼편지체";
   align-self: flex-start;
   visibility: hidden;
   margin: 0;
@@ -485,40 +490,93 @@ body {
 .skills__gauge__main {
   /* background-color: olive; */
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills__gauge__one {
+  width: 60vw;
+  height: fit-content;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+}
+.skills__gauge__two {
+  width: 40vw;
+  height: fit-content;
+  /* background-color: yellowgreen; */
+  display: flex;
+  justify-content: space-around;
 }
 
 .skills__gauge__java {
-  left: 2vw;
+  left: 7vw;
   top: 5vh;
   /* background-color: #ff00e6; */
-  position: absolute;
-  width: 30vw;
-  height: 17vw;
+  width: fit-content;
   overflow: hidden;
   text-align: center;
+  height: 7vw;
+  display: flex;
+  align-items: center;
 }
+.skills__java {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__gauge__lang h3 {
+  width: 15vw;
+  font-size: 1.2vw;
+}
+
 .skills__gauge__hcj {
-  left: 34vw;
-  bottom: 12vh;
+  left: 24vw;
+  top: 5vh;
   /* background-color: cyan; */
-  position: absolute;
-  width: 30vw;
-  height: 17vw;
+  width: fit-content;
   overflow: hidden;
+  height: 7vw;
+  display: flex;
   text-align: center;
+  align-items: center;
 }
 .skills__gauge__sql {
-  left: 66vw;
+  left: 41vw;
   top: 5vh;
   /* background-color: #00ff22; */
-  position: absolute;
-  width: 30vw;
-  height: 17vw;
+  width: fit-content;
   overflow: hidden;
+  height: 7vw;
+  display: flex;
   text-align: center;
+  align-items: center;
+}
+.skills__gauge__spring {
+  left: 58vw;
+  top: 5vh;
+  /* background-color: #00ff22; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.skills__gauge__git {
+  left: 75vw;
+  top: 5vh;
+  /* background-color: #00ff22; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .gauge__a {
@@ -527,9 +585,9 @@ body {
   position: relative;
   /* background-color: whitesmoke; */
   background-color: whitesmoke;
-  width: 30vw;
-  height: 15vw;
-  bottom: -2vw;
+  width: 15vw;
+  height: 7.5vw;
+  top: 10vw;
   border-radius: 300px 300px 0px 0px;
 }
 
@@ -538,9 +596,9 @@ body {
   z-index: 11;
   position: relative;
   background-color: rgb(59, 59, 59);
-  width: 25vw;
-  height: 12.5vw;
-  top: -10vw;
+  width: 10vw;
+  height: 5vw;
+  top: 5vw;
   left: 2.5vw;
   border-radius: 300px 300px 0px 0px;
 }
@@ -556,9 +614,9 @@ body {
     rgba(197, 29, 253, 1) 50%,
     rgba(69, 202, 252, 1) 100%
   );
-  width: 30vw;
-  height: 15vw;
-  top: -10.5vw;
+  width: 15vw;
+  height: 7.5vw;
+  top: 5vw;
   border-radius: 0px 0px 300px 300px;
   transform-origin: center top;
   transition: transform 1s ease-in-out;
@@ -584,8 +642,8 @@ body {
   position: relative;
   z-index: 20;
   color: white;
-  font-size: 2.7vw;
-  top: -37vw;
+  font-size: 1.5vw;
+  top: -8.5vw;
   /* transition: all 1s ease-out; */
 }
 
@@ -664,6 +722,105 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.works__body {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.works__headtext {
+  /* background-color: yellow; */
+  width: 70vw;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+.works__headtext h1,
+.works__headtext p {
+  color: whitesmoke;
+  margin: 0;
+}
+.works__gallery {
+  visibility: hidden;
+  width: 70vw;
+  /* background-color: yellowgreen; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.first__project {
+  margin: 1vw;
+  margin-top: 0;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.second__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.third__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.fourth__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.lower {
+  margin-top: 6vh;
+}
+.project__hover {
+  align-items: center;
+  text-align: center;
+  transition: width 0.5s;
+}
+.project__hover p {
+  visibility: hidden;
+  color: whitesmoke;
+  position: absolute;
+  width: fit-content;
+  font-size: 1vw;
+  z-index: 20;
+  line-height: 35px;
+  transition-property: all !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease !important;
+  transition-delay: 0.1s !important;
+}
+.project__hover:hover {
+  width: 30vw;
+}
+.project__hover img:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(20%);
+  transition: 0.3s ease-in-out;
+  transition-property: transform, filter;
+}
+
+.works__gallery img {
+  height: 30vw;
+  z-index: 10;
+}
 /* ETC */
 .etc {
   height: 700px;
