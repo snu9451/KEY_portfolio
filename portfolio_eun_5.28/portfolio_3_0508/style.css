@@ -892,7 +892,7 @@ footer {
   /* position: absolute; */
   /* display: flex;
   flex-direction: column; */
-  height: 500px;
+  height: 450px;
   /* background-color: darkgreen; */
   /* min-width: 500px; */
 }
@@ -984,6 +984,13 @@ footer .icons ul li a {
 footer .icons ul li a:hover {
   color: rgb(206, 0, 144);
   transition: 0.3s ease;
+}
+
+.copyright {
+  width: 100vw;
+  height: fit-content;
+  font-size: 8px;
+  color: rgb(37, 37, 37);
 }
 
 /* /////////////속성클래스///////////// */
