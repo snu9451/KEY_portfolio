@@ -238,11 +238,13 @@ window.onscroll = () => {
         doVisible($(".aboutme__navbar li"));
         doVisible($(".aboutme__mypic"));
         doVisible($(".aboutme__text"));
+        doVisible($(".aboutme_history"));
         doVisible($(".aboutme__body h1"));
 
         $(".aboutme__navbar li").css("animation", "fadeInUp 1s ease");
         $(".aboutme__mypic").css("animation", "fadeInLeft 1s ease");
         $(".aboutme__text").css("animation", "fadeInRight 1s ease");
+        $(".aboutme_history").css("animation", "fadeIn 1s ease");
         // $(".i__scroll__child").css("color","whitesmoke");
         // colorChange($(".i__scroll__child"), "whitesmoke");
     }
@@ -254,7 +256,7 @@ window.onscroll = () => {
       doVisible($(".works__gallery"));
       $(".works__gallery").css("animation", "fadeInUp 1s ease");
     }
-    if (moveTop >= etcTop-100){
+    if (moveTop >= etcTop+60){
       console.log("마지막 페이지");
       $(".i__scroll__child").css("color","rgb(37, 37, 37");
     }

@@ -404,6 +404,7 @@ eun {
 }
 
 .aboutme_history {
+  visibility: hidden;
   margin: 0 auto;
   min-width: 84vw;
   height: fit-content;
@@ -738,9 +739,13 @@ eun {
   margin-top: 5vh;
   margin-bottom: 2vh;
 }
-.works__headtext h1,
-.works__headtext p {
+.works__headtext h1 {
+  font-size: 1.5vw;
   color: whitesmoke;
+  margin: 0;
+}
+.works__headtext p {
+  font-size: 0.7vw;
   margin: 0;
 }
 .works__gallery {
@@ -952,14 +957,20 @@ footer {
 }
 .form__submit {
   background: rgb(37, 37, 37) !important;
-  border: none;
+  border: none !important;
   color: whitesmoke !important;
 }
 .form__submit:hover {
+  border: none !important;
   cursor: pointer;
   background: #ff00e6 !important;
   transition: all 0.2s ease;
 }
+
+footer .icons {
+  margin-top: 30px;
+}
+
 footer .icons ul {
   margin: 0px auto;
   padding: 0;
