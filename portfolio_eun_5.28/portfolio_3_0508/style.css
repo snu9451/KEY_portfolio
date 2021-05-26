@@ -18,6 +18,10 @@ eun {
   color: black;
   font-weight: bolder;
 }
+eunw {
+  color: white;
+  font-weight: bolder;
+}
 /* .body__padding 클래스들에게 일괄적으로 패딩적용하기 */
 .body__padding {
   box-sizing: border-box;
@@ -532,7 +536,7 @@ eun {
 }
 .skills__gauge__lang h3 {
   width: 15vw;
-  font-size: 1.2vw;
+  font-size: 0.85vw;
 }
 
 .skills__gauge__hcj {
@@ -810,11 +814,15 @@ eun {
   transition-timing-function: ease !important;
   transition-delay: 0.1s !important;
 }
+.project__hover p:hover .project__hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(20%);
+}
 .project__hover:hover {
   width: 30vw;
 }
 .project__hover img:hover {
-  background-color: whitesmoke;
   cursor: pointer;
   transform: scale(1.05);
   filter: brightness(20%);

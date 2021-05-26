@@ -121,9 +121,9 @@ function moveScreen() {
         console.log("마지막 페이지입니다.");
         $(".i__scroll p").text("맨 위로 올라가기");
         scrollIcon.attr("class", "fas fa-angle-double-up");
-        // $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
-        // 무한 반짝임 구현 function loop(){   scrollIcon     .animate({opacity:0}, 400)
-        // .animate({opacity:1}, 400, loop); }; loop();
+        // $(".i__scroll__child").css("color", "rgb(37, 37, 37)"); 무한 반짝임 구현 function
+        // loop(){   scrollIcon     .animate({opacity:0}, 400) .animate({opacity:1},
+        // 400, loop); }; loop();
     } else {
         $(".i__scroll p").text("아래로 스크롤");
         $(".i__scroll i").attr("class", "fas fa-angle-down");
@@ -145,9 +145,9 @@ $('a:contains("Etc")').on('click', () => {
 $(".i__scroll__child").on('mouseout', () => {
     console.log("마우스 나가요");
     if ($(".i__scroll__child p").text() == "맨 위로 올라가기") {
-      $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
+        $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
     } else {
-      $(".i__scroll__child").css("color", "whitesmoke");    
+        $(".i__scroll__child").css("color", "whitesmoke");
     }
 });
 
@@ -221,17 +221,17 @@ window.onscroll = () => {
         .offset()
         .top;
     let skillsTop = $("#skills")
-    .offset()
-    .top;
+        .offset()
+        .top;
     let worksTop = $("#works")
-    .offset()
-    .top;
+        .offset()
+        .top;
     let etcTop = $("#etc")
-    .offset()
-    .top;
-    // top 값 출력해보기
-    // console.log("aboutTop: "+aboutTop+", skillsTop: "+skillsTop+", worksTop: "+worksTop+", etcTop: "+etcTop)
-    $(".i__scroll__child").css("color","whitesmoke");
+        .offset()
+        .top;
+    // top 값 출력해보기 console.log("aboutTop: "+aboutTop+", skillsTop: "+skillsTop+",
+    // worksTop: "+worksTop+", etcTop: "+etcTop)
+    $(".i__scroll__child").css("color", "whitesmoke");
     console.log("moveTop: " + moveTop + ", aboutTop: " + aboutTop);
     if (moveTop >= aboutTop && moveTop < skillsTop) {
         console.log("aboutme 창 진입");
@@ -248,17 +248,17 @@ window.onscroll = () => {
         // $(".i__scroll__child").css("color","whitesmoke");
         // colorChange($(".i__scroll__child"), "whitesmoke");
     }
-    if(moveTop>=skillsTop-100 && moveTop < worksTop){
-      fillGauge();
+    if (moveTop >= skillsTop - 100 && moveTop < worksTop) {
+        fillGauge();
     }
-    if(moveTop >= worksTop-100 && moveTop < etcTop){
-      console.log("Works창 진입");
-      doVisible($(".works__gallery"));
-      $(".works__gallery").css("animation", "fadeInUp 1s ease");
+    if (moveTop >= worksTop - 100 && moveTop < etcTop) {
+        console.log("Works창 진입");
+        doVisible($(".works__gallery"));
+        $(".works__gallery").css("animation", "fadeInUp 1s ease");
     }
-    if (moveTop >= etcTop+60){
-      console.log("마지막 페이지");
-      $(".i__scroll__child").css("color","rgb(37, 37, 37");
+    if (moveTop >= etcTop + 60) {
+        console.log("마지막 페이지");
+        $(".i__scroll__child").css("color", "rgb(37, 37, 37");
     }
 };
 
@@ -287,32 +287,45 @@ function colorChange(tag, color) {
     tag.css("color", color);
 };
 
-
 // percent만큼 게이지가 올라가도록 이벤트 구현하는 함수
-function fillGauge(){
-      $(".percent").each((index)=>{
+function fillGauge() {
+    $(".percent").each((index) => {
         // console.log(index+$(".percent").eq(index).text());
         // console.log($(".percent").eq(index).text().includes(prcnt));
-        // console.log(Number($(".percent").eq(index).text().substr(0,2)));
-        // 제이쿼리 객체의 텍스트 노드에 입력된 숫자를 읽어와 그만큼 게이지를 채우도록 구현
-        let percent = Number($(".percent").eq(index).text().substr(0,2));
-        let degree = percent/200;
+        // console.log(Number($(".percent").eq(index).text().substr(0,2))); 제이쿼리 객체의 텍스트
+        // 노드에 입력된 숫자를 읽어와 그만큼 게이지를 채우도록 구현
+        let percent = Number($(".percent").eq(index).text().substr(0, 2));
+        let degree = percent / 200;
         // console.log(degree);
-        let str = "rotate("+degree+"turn)";
+        let str = "rotate(" + degree + "turn)";
         // console.log("percent===> "+percent+", degree===> "+degree+", str===> "+str);
-        $(".gauge__c").eq(index).css("transform", str);
+        $(".gauge__c")
+            .eq(index)
+            .css("transform", str);
         // $(".gauge__c").eq(index).css("transform", "rotate(30deg)");
         // $(".gauge__c").eq(index).css("transform", "rotate(0.5turn)");
-      });
+    });
 }
 
 // 프로젝트 이미지에 마우스 오버 시(hover) 이벤트 구현
-$(".project__hover").each(function(index){
-  $(".project__hover").eq(index).on('mouseover', ()=>{
-    // console.log("마우스 오버"+$(".project__hover p").eq(index).text());
-    doVisible($(".project__hover p").eq(index));
-  });
-  $(".project__hover").eq(index).on('mouseout', ()=>{
-    doHidden($(".project__hover p").eq(index));
-  });
+$(".project__hover").each(function (index) {
+    $(".project__hover")
+        .eq(index)
+        .on('mouseover', () => {
+            $(".project__hover img")
+                .eq(index)
+                .css("filter", "brightness(20%)")
+                .css("transform", "scale(1.05)");
+            // console.log("마우스 오버"+$(".project__hover p").eq(index).text());
+            doVisible($(".project__hover p").eq(index));
+        });
+    $(".project__hover")
+        .eq(index)
+        .on('mouseout', () => {
+            $(".project__hover img")
+                .css("filter", "brightness(100%)")
+                .css("transform", "scale(1.05)")
+            doHidden($(".project__hover p").eq(index));
+        });
+
 });
