@@ -1,0 +1,4520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>김은영 포트폴리오</title>
+        <!-- font -->
+        <link rel="icon" href="images/myfavicon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+            rel="stylesheet">
+
+<style>
+  @charset "UTF-8";
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes flash {
+  0%,
+  100%,
+  50% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%,
+  100%,
+  50% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes myswing {
+  20% {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+    -ms-transform: translateX(-25%) rotate(-5deg);
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+    -ms-transform: translateX(20%) rotate(3deg);
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+    -ms-transform: translateX(-15%) rotate(-3deg);
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+    -ms-transform: translateX(10%) rotate(2deg);
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+    -ms-transform: translateX(-5%) rotate(-1deg);
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  80% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  80% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@-webkit-keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+}
+
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+@-webkit-keyframes bounceOutDown {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes bounceOutDown {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes bounceOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+.bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}
+
+@-webkit-keyframes bounceOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes bounceOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+.bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+}
+
+@-webkit-keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig;
+}
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+.fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig;
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg)
+      scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg)
+      scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg)
+      scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg)
+      scale(1);
+    -ms-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg)
+      scale(1);
+    -ms-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg)
+      scale(0.95);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+    transform: perspective(400px) rotateY(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    -ms-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+    -ms-transform: perspective(400px) rotateY(-10deg);
+    transform: perspective(400px) rotateY(-10deg);
+  }
+
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    -ms-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    -ms-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+@-webkit-keyframes flipOutX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutX {
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+@-webkit-keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    -ms-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    -ms-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+}
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    -ms-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    -ms-transform: translateX(-20%) skewX(30deg);
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    -ms-transform: translateX(0%) skewX(-15deg);
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    -ms-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes lightSpeedOut {
+  0% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    -ms-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    -ms-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+.lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(-200deg);
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(-200deg);
+    -ms-transform: rotate(-200deg);
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight;
+}
+
+@-webkit-keyframes rotateInUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft;
+}
+
+@-webkit-keyframes rotateInUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight;
+}
+
+@-webkit-keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(200deg);
+    -ms-transform: rotate(200deg);
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+.rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+}
+
+@-webkit-keyframes rotateOutDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft;
+}
+
+@-webkit-keyframes rotateOutDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight;
+}
+
+@-webkit-keyframes rotateOutUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpLeft {
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft;
+}
+
+@-webkit-keyframes rotateOutUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight {
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+@-webkit-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+@-webkit-keyframes slideOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+}
+
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40% {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    -webkit-transform: translateY(700px);
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  0% {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    -webkit-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40% {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    -ms-transform: rotate(60deg) translateY(0);
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    -webkit-transform: translateY(700px);
+    -ms-transform: translateY(700px);
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    -ms-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@keyframes rollOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    -ms-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+
+.rollOut {
+  -webkit-animation-name: rollOut;
+  animation-name: rollOut;
+}
+
+  html {
+  overflow-x: hidden;
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #7c7877;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(37, 37, 37);
+  /* background-color: yellow; */
+  /* min-width: 500px; */
+  overflow-x: hidden;
+}
+eun {
+  color: black;
+  font-weight: bolder;
+}
+eunw {
+  color: white;
+  font-weight: bolder;
+}
+/* .body__padding 클래스들에게 일괄적으로 패딩적용하기 */
+.body__padding {
+  box-sizing: border-box;
+  padding: 2vw 15vw;
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+}
+.i__scroll {
+  /* background-color: yellow; */
+  position: fixed;
+  bottom: 2vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  z-index: 15;
+}
+.i__scroll__child {
+  color: whitesmoke;
+  width: fit-content;
+}
+.i__scroll__child p {
+  width: fit-content;
+  font-size: 2vh;
+  margin: 0;
+  padding: 0;
+}
+.i__scroll i {
+  font-size: 3vh;
+  animation: aniUpDown 0.8s ease infinite;
+}
+/* flash 애니메이션 */
+@keyframes flashing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 스크롤 안내 아이콘이 위아래로 움직이는 애니메이션 */
+@keyframes aniUpDown {
+  0% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    transform: translateY(7px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+#copytextbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* bg_img 블러애니메이션 */
+.blurrr {
+  animation: blurdarken 2s ease forwards;
+}
+@keyframes blurdarken {
+  0% {
+    transform: scale(1);
+    -webkit-filter: blur(0px) brightness(100%);
+    z-index: 10;
+  }
+  20% {
+    transform: scale(1.1);
+    -webkit-filter: blur(5px) brightness(160%);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-filter: blur(0px) brightness(50%) contrast(200%) grayscale(100%);
+    z-index: -1;
+  }
+}
+/* HOME */
+.home {
+  /* max-height: 900px; */
+  /* background-color: black; */
+  align-items: center;
+  color: white;
+  /* height: fit-content; */
+}
+.bg__img {
+  margin: 0;
+  padding: 0;
+  /* height: fit-content; */
+  position: fixed;
+  /* background-image: url("images/effel.png"); */
+  /* background-color: yellow; */
+  /* background-repeat: repeat-y; */
+  /* filter: brightness(30%); */
+  /* z-index: 10; */
+}
+.bg__img img {
+  width: 100vw;
+}
+.navbar {
+  /* background-color: red; */
+  width: 59vw;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+}
+.navbar li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  /* background-color: #f0e5de; */
+  margin: 0;
+  /* background-color: aqua; */
+  list-style: none;
+}
+.li__aboutme:hover,
+.li__etc:hover,
+.li__skills:hover,
+.li__works:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+}
+.navbar li a {
+  padding: 0;
+  margin: 0;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: whitesmoke;
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.baseline {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  height: 2px;
+  border: none;
+  animation: fadeInRight 2s ease 1s;
+}
+.home__logo {
+  /* background-color: blacsk; */
+  padding-left: 3vw;
+  padding-right: 3vw;
+  animation: fadeInLeft 2s ease 1s;
+}
+.home__logo:hover {
+  cursor: pointer;
+}
+.home__logo img {
+  width: 30vw;
+  /* animation: myswing 0.8s ease 1.8s; */
+}
+.i__click {
+  position: relative;
+  transform: translate(12vw, 6vw);
+  width: fit-content;
+}
+.i__click img {
+  width: 2vw;
+}
+.contact {
+  right: 1vw;
+  bottom: 1vh;
+  position: absolute;
+  /* background-color: yellow; */
+  text-align: center;
+  /* z-index: 1; */
+}
+/* 연락처 */
+.contact > .title {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1vw;
+  font-weight: light;
+  /* margin-bottom: 2vh; */
+  /* background-color: wheat; */
+}
+.contact > .email {
+  display: flex;
+  justify-content: left;
+}
+.contact > .phone {
+  display: flex;
+  justify-content: left;
+}
+.contact button {
+  cursor: pointer;
+  display: block;
+  font-size: 1.3vw;
+  color: white;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  margin-right: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0.1vw solid #7c7877;
+  animation: aniglow 2s ease infinite;
+  z-index: 16;
+}
+
+.contact button:hover {
+  color: rgb(37, 37, 37);
+  background-color: whitesmoke;
+  border: 0.1vw solid transparent;
+}
+
+/* @keyframes aniglow {
+  0% {
+    box-shadow: #77aaad 0px 0px 25px -5px, #77aaad 0px 10px 10px -5px;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: #77aaad 0px 0px 25px -5px, #77aaad 0px 10px 10px -5px;
+  }
+} */
+@keyframes aniglow {
+  0% {
+    box-shadow: #ffffff 0 0 5px 0px, #ffffff 0 0 5px 0;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: #ffffff 0 0 5px 0px, #ffffff 0 0 5px 0;
+  }
+}
+
+.contact > .email p {
+  margin: 1vh 0 0;
+  /* margin-bottom: 1vh; */
+  font-size: 1.2vw;
+  z-index: 16;
+}
+.contact > .phone p {
+  margin: 1vh 0 0;
+  /* margin-bottom: 1vh; */
+  font-size: 1.2vw;
+  z-index: 16;
+}
+/* ABOUT ME */
+.aboutme {
+  flex-flow: column;
+}
+.aboutme__header {
+  background-color: rgb(37, 37, 37);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  z-index: 5;
+  height: fit-content;
+}
+.aboutme__navbar {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutme__navbar li {
+  visibility: hidden;
+  list-style: none;
+}
+
+.aboutme__navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.5vw;
+}
+.aboutme__navbar a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutme__navbar .first__a {
+  font-size: 3vw;
+  font-weight: bolder;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutme__body {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme__mypic_and_mytext {
+  min-width: 84vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.aboutme__mypic {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(37, 37, 37);
+  width: 18vw;
+  height: 18vw;
+  min-width: 150px;
+  min-height: 150px;
+  position: relative;
+  margin: 20px;
+  z-index: 5;
+}
+.aboutme__mypic img {
+  min-width: 150px;
+  min-height: 150px;
+  width: 18vw;
+  position: absolute;
+  top: -1vw;
+  left: -1vw;
+  z-index: 4;
+}
+.aboutme__text {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  min-width: 300px;
+}
+.aboutme__body h1 {
+  font-family: "휴먼편지체";
+  align-self: flex-start;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5vw;
+}
+
+.aboutme_history {
+  visibility: hidden;
+  margin: 0 auto;
+  min-width: 84vw;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-top: 2vw;
+}
+.aboutme_history > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+.aboutme_history > div > p {
+  text-align: left;
+  min-width: 150px;
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+.aboutme__footer {
+  background-color: rgb(37, 37, 37);
+  width: 100vw;
+  height: 10vh;
+}
+/* SKILLS */
+.skills {
+  background-color: rgb(37, 37, 37);
+  /* background-color: yellow; */
+}
+
+.skills__header {
+  background-color: rgb(37, 37, 37);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  height: fit-content;
+  z-index: 5;
+}
+.skills__navbar {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills__navbar li {
+  /* visibility: hidden; */
+  list-style: none;
+}
+
+.skills__navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.5vw;
+}
+.skills__navbar a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skills__navbar .second__a {
+  font-size: 3vw;
+  font-weight: bolder;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* //////////////게이지////////////// */
+.skills__gauge__main {
+  /* background-color: olive; */
+  position: absolute;
+  margin-top: 10vh;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills__gauge__one {
+  width: 60vw;
+  height: fit-content;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+}
+.skills__gauge__two {
+  width: 40vw;
+  height: fit-content;
+  /* background-color: yellowgreen; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills__gauge__java {
+  left: 7vw;
+  top: 5vh;
+  /* background-color: #ff00e6; */
+  width: fit-content;
+  overflow: hidden;
+  text-align: center;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+}
+.skills__java {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__gauge__lang h3 {
+  width: 15vw;
+  font-size: 0.85vw;
+}
+
+.skills__gauge__hcj {
+  left: 24vw;
+  top: 5vh;
+  /* background-color: cyan; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.skills__gauge__sql {
+  left: 41vw;
+  top: 5vh;
+  /* background-color: #00ff22; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.skills__gauge__spring {
+  left: 58vw;
+  top: 5vh;
+  /* background-color: #00ff22; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.skills__gauge__git {
+  left: 75vw;
+  top: 5vh;
+  /* background-color: #00ff22; */
+  width: fit-content;
+  overflow: hidden;
+  height: 7vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.gauge__a {
+  margin: 0 auto;
+  z-index: 9;
+  position: relative;
+  /* background-color: whitesmoke; */
+  background-color: whitesmoke;
+  width: 15vw;
+  height: 7.5vw;
+  top: 10vw;
+  border-radius: 300px 300px 0px 0px;
+}
+
+.gauge__b {
+  left: 0 auto;
+  z-index: 11;
+  position: relative;
+  background-color: rgb(59, 59, 59);
+  width: 10vw;
+  height: 5vw;
+  top: 5vw;
+  left: 2.5vw;
+  border-radius: 300px 300px 0px 0px;
+}
+
+.gauge__c {
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+  /* background-color: #5664f9; */
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  width: 15vw;
+  height: 7.5vw;
+  top: 5vw;
+  border-radius: 0px 0px 300px 300px;
+  transform-origin: center top;
+  transition: transform 1s ease-in-out;
+}
+
+/* .skills__gauge:hover .gauge__c {
+  transform: rotate(0.4turn);
+} */
+
+/* .skills__gauge:hover .gauge___data {
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(
+    90deg,
+    rgb(112, 172, 240) 0%,
+    rgb(29, 126, 253) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.gauge___data h1 {
+  position: relative;
+  z-index: 20;
+  color: white;
+  font-size: 1.5vw;
+  top: -8.5vw;
+  /* transition: all 1s ease-out; */
+}
+
+.skills__gauge__logos {
+  background-color: whitesmoke;
+  position: absolute;
+  margin-top: 80vh;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.skills__gauge__logos:hover {
+  filter: brightness(50%) contrast(150%);
+}
+.skills__gauge__logos img {
+  margin: 0 auto;
+  width: 90vw;
+  margin-left: 4vw;
+  margin-right: 5vw;
+}
+/* WORKS */
+.works {
+  background-color: rgb(37, 37, 37);
+  /* background-color: pink; */
+}
+
+.works__header {
+  background-color: rgb(37, 37, 37);
+  /* background-color: aqua; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  height: fit-content;
+  z-index: 5;
+}
+.works__navbar {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.works__navbar li {
+  /* visibility: hidden; */
+  list-style: none;
+}
+
+.works__navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.5vw;
+}
+.works__navbar a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.works__navbar .third__a {
+  font-size: 3vw;
+  font-weight: bolder;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.works__body {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.works__headtext {
+  /* background-color: yellow; */
+  width: 70vw;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+.works__headtext h1 {
+  font-size: 1.5vw;
+  color: whitesmoke;
+  margin: 0;
+}
+.works__headtext p {
+  font-size: 0.7vw;
+  margin: 0;
+}
+.works__gallery {
+  visibility: hidden;
+  width: 70vw;
+  /* background-color: yellowgreen; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.first__project {
+  margin: 1vw;
+  margin-top: 0;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.second__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.third__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.fourth__project {
+  margin: 1vw;
+  width: 14vw;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.lower {
+  margin-top: 6vh;
+}
+.project__hover {
+  align-items: center;
+  text-align: center;
+  transition: width 0.5s;
+}
+.project__hover p {
+  visibility: hidden;
+  color: whitesmoke;
+  position: absolute;
+  width: fit-content;
+  font-size: 1vw;
+  z-index: 20;
+  line-height: 35px;
+  transition-property: all !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease !important;
+  transition-delay: 0.1s !important;
+}
+.project__hover p:hover .project__hover img {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(20%);
+}
+.project__hover:hover {
+  width: 30vw;
+}
+.project__hover img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(20%);
+  transition: 0.3s ease-in-out;
+  transition-property: transform, filter;
+}
+
+.works__gallery img {
+  height: 30vw;
+  z-index: 10;
+}
+/* ETC */
+.etc {
+  height: 700px;
+  background-color: rgb(37, 37, 37);
+  z-index: 5;
+}
+.etc__header {
+  background-color: rgb(37, 37, 37);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  height: fit-content;
+  z-index: 5;
+}
+.etc__navbar {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.etc__navbar li {
+  /* visibility: hidden; */
+  list-style: none;
+}
+
+.etc__navbar a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.5vw;
+}
+.etc__navbar a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.etc__navbar .fourth__a {
+  font-size: 3vw;
+  font-weight: bolder;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 112, 117, 1) 0%,
+    rgba(197, 29, 253, 1) 50%,
+    rgba(69, 202, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* footer */
+footer {
+  background-color: whitesmoke;
+  /* width: 1100px; */
+  width: 100vw;
+  height: 550px;
+  text-align: center;
+  /* position: relative; */
+  z-index: -1;
+}
+
+.footer__wrapper {
+  margin: 0px auto;
+  width: fit-content;
+  /* position: absolute; */
+  /* display: flex;
+  flex-direction: column; */
+  height: 450px;
+  /* background-color: darkgreen; */
+  /* min-width: 500px; */
+}
+
+.footer__body {
+  width: 100%;
+  height: 65%;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 입력 form */
+.form-group textarea,
+.form-group input {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #495057;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+.form-group textarea {
+  height: 120px;
+  resize: none;
+}
+/* text-area form에 대한 설정 */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border: 1px solid #6262628f;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #eaf8fd;
+  outline: 0;
+  /* -webkit-box-shadow: 0 0 0 0.1rem rgba(105, 105, 105, 0.25); */
+  /* box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.25); */
+  border: 1px solid #ff63ef;
+  box-shadow: inset 0px 0px 3px -1px #5d1a57d3;
+}
+.form-control::placeholder {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color: lightgray;
+  opacity: 1;
+}
+.form__submit {
+  background: rgb(37, 37, 37) !important;
+  border: none !important;
+  color: whitesmoke !important;
+}
+.form__submit:hover {
+  border: none !important;
+  cursor: pointer;
+  background: #ff00e6 !important;
+  transition: all 0.2s ease;
+}
+
+footer .icons {
+  margin-top: 30px;
+}
+
+footer .icons ul {
+  margin: 0px auto;
+  padding: 0;
+  width: fit-content;
+  /* background-color: #887e7c; */
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .icons ul li {
+  margin: 0;
+  list-style: none;
+}
+
+footer .icons ul li a {
+  margin: 0;
+  font-size: 20px;
+  color: rgb(37, 37, 37);
+}
+
+footer .icons ul li a:hover {
+  color: rgb(206, 0, 144);
+  transition: 0.3s ease;
+}
+
+.copyright {
+  width: 100vw;
+  height: fit-content;
+  font-size: 8px;
+  color: rgb(37, 37, 37);
+}
+
+/* /////////////속성클래스///////////// */
+.gotoUp {
+  cursor: pointer;
+}
+.scrollDown {
+  cursor: default;
+}
+
+</style>
+        <script src="https://kit.fontawesome.com/aa4e385726.js" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+          'use strict'
+// window.onload = loading;
+let moveTop = $(window).scrollTop(); // scrollTop() 이 jQuery에서 제공하는 메소드이기 때문에 이와 같이 작성?
+let lastTop = $(".content:last")
+    .offset()
+    .top - 100;
+// 스크롤의 위치 값을 담는 전역변수 선언 (함수를 이용해 스크롤 발생 시 마다 초기화)
+let scrollCount = Math.ceil(window.scrollY);
+
+// window.onload = scrolling;
+window.onload = function () {
+    // setTimeout(function(){ }); $(window).scrollTop(); scrollTo(0,
+    // document.querySelector("body").offsetTop);
+    bghandler();
+    scrolling();
+    console.log("onload 이벤트");
+    scrollTo(0, 0);
+};
+//
+// $(".aboutme__mypic img").click(()=>{   window.location.reload(); })
+// window.onload = scrolling; 스크롤 발생 시 이벤트 구현
+window.onscroll = () => {
+    scrollCount = Math.ceil(window.scrollY);
+    $(".scrollNumCheck").text(scrollCount);
+    // console.log(scrollCount);
+};
+
+// css: onload 시 배경화면 뿌옇게 했다가 어두워지면서 z-index 낮아지도록
+function bghandler() {
+    $(".bg__img").addClass('blurrr');
+};
+
+// $(document).ready = function(){   setTimeout(function(){     scrollTo(0,0);
+// },0); }; $(window).on('beforeunload', function(){   $(this).scrollTop(0); });
+console.log(lastTop);
+// a 태그의 '링크이동 기능' 막기 $(".navbar ul li a").on('click', (e) => {
+// e.preventDefault();     console.log(); }); $(".navbar ul
+// li").each(function(index){   console.log(index);   $(".navbar ul
+// li").on('click', ()=>{     let name_attr = $(".navbar ul
+// li").eq(index).children().attr("name");     console.log(name_attr);   }); });
+// main navbar의 a태그 클릭 시 화면이동(링크이동) 구현 $(".navbar ul li a").on('click', (e) => {
+// let name_attr = "#" + $(e.target).attr("name");     moveTop = $(name_attr)
+// .offset()         .top;     moveScreen(); });
+
+$(".navbar ul li").on('click', () => {});
+
+// navbar의 메뉴 클릭시 화면이동 구현 window.onload = () =>{   let imsi = $(".navbar
+// li").children().each(function(index){     $(".navbar
+// li").eq(index).attr("name");   });   console.log(imsi); }; $(".navbar
+// a").each(function(index){          .eq(index)         $(this).eq(index)
+// .on('click', (ev) => {             ev.preventDefault();
+// console.log($(this).eq(index).attr("name"));
+// console.log($("a[name='skills']").text());         }) }); $(".navbar ul
+// li").on('click', (e) => {}); .each('click', (ev) => { ev.preventDefault(); })
+// .parent("li") .on('click', () => { console.log("클릭");;     const whereToGo =
+// $(this).attr("href"); console.log(whereToGo); $(".content").each((index) => {
+// var elmSelector = $(this).eq(index); if(elmSelector.attr('id') == )     });
+// });
+
+function scrolling() {
+    $(".navbar > ul").hide();
+    let elm = ".content";
+    $(elm).each(function (index) {
+        // 개별적으로 Wheel 이벤트 적용
+        $(this).on("mousewheel DOMMouseScroll", function (e) {
+            // console.log(event.detail);   0 console.log("deltaY ===> " + event.deltaY);
+            // console.log("wheelDelta ===> " + event.wheelDelta);
+            e.preventDefault(); // 스크롤 발생 시 브라우저는 페이지를 움직이는데, 그 활동(default action)을 즉시 차단한다.
+            let delta = 0;
+            // e가 아닌 event를 쓰는 이유는 mousewheel 이벤트(e)가 아닌 window의 event를 가져오기 위함인가?
+            if (!event) // event에 대한 null 체크
+                event = window.event;
+            if (event.wheelDelta) {
+                delta = event.wheelDelta / 120; // 어차피 부호만 사용하는 것 같은데 120으로 나누는 이유는?
+                //
+                // if (window.opera)     delta = -delta;
+            }
+            // else if (event.detail)  evevnt.detail의 값이 0이므로 false로 인식되어 패스된다.     delta =
+            // -event.detail / 3; 스크롤 바의 수직 위치를 가져옴 (스크롤 바의 맨 윗부분 위치를 가져오는 듯) 현재 .content에
+            // 의해 집합이 선택되어 있기 때문에 단일 객체만 담는 작업을 해준다.
+            var elmSelecter = $(elm).eq(index);
+            if (delta < 0) { // 휠을 아래로 내리면 wheelDelta 곧, delta는 음수
+                if ($(elmSelecter).next() != undefined) { // 다음 요소가 있다면(존재한다면)...
+                    console.log("마우스 내려요~");
+                    try {
+                        moveTop = $(elmSelecter) // 현재 요소의
+                            .next() // 다음 요소의
+                            .offset() // 현재 위치(position)의 -- top과 left를 반환
+                            .top; // top(위에서 부터의 위치)을 가져와라.
+                    } catch (e) {}
+                }
+            } else { // 휠을 위로 올리면 wheelDelta 곧, delta는 양수
+                if ($(elmSelecter).prev() != undefined) {
+                    console.log("마우스 올려요~");
+                    try {
+                        moveTop = $(elmSelecter)
+                            .prev()
+                            .offset()
+                            .top;
+                    } catch (e) {}
+                }
+            }
+            moveScreen();
+        });
+    });
+}
+
+function moveScreen() {
+    // 화면 이동 0.3초(300)
+    $("html,body")
+    // .stop()
+        .animate({
+        scrollTop: moveTop + 'px'
+    }, {
+        duration: 0,
+        complete: function () {}
+    });
+    // 마지막 페이지에서는 스크롤 아이콘 및 메세지가 바뀌어야 함
+    if (moveTop > lastTop) {
+        let scrollIcon = $(".i__scroll i");
+        console.log("마지막 페이지입니다.");
+        $(".i__scroll p").text("맨 위로 올라가기");
+        scrollIcon.attr("class", "fas fa-angle-double-up");
+        // $(".i__scroll__child").css("color", "rgb(37, 37, 37)"); 무한 반짝임 구현 function
+        // loop(){   scrollIcon     .animate({opacity:0}, 400) .animate({opacity:1},
+        // 400, loop); }; loop();
+    } else {
+        $(".i__scroll p").text("아래로 스크롤");
+        $(".i__scroll i").attr("class", "fas fa-angle-down");
+        // $(".i__scroll__child").css("color", "whitesmoke");
+    }
+}
+
+// Etc.(마지막 페이지) 클릭 시 스크롤 아이콘 및 메세지 변경 $('a:contains("Etc.")').on('click', ()=>{
+// alert($(this).text());   if($(this).val() == "Etc."){     alert("Etc. 클릭"); }
+// });
+$('a:contains("Etc")').on('click', () => {
+    let scrollIcon = $(".i__scroll i");
+    console.log("마지막 페이지입니다.");
+    $(".i__scroll p").text("맨 위로 올라가기");
+    scrollIcon.attr("class", "fas fa-angle-double-up");
+    // alert($('a:contains("Etc")').text());
+});
+
+$(".i__scroll__child").on('mouseout', () => {
+    console.log("마우스 나가요");
+    if ($(".i__scroll__child p").text() == "맨 위로 올라가기") {
+        $(".i__scroll__child").css("color", "rgb(37, 37, 37)");
+    } else {
+        $(".i__scroll__child").css("color", "whitesmoke");
+    }
+});
+
+$(".i__scroll__child").on('mouseover', () => {
+    if ($(".i__scroll__child p").text() == "맨 위로 올라가기") {
+        // 이미 i__scroll이라는 클래스 이름을 가지고 있지만 클래스 이름을 더 추가할 수 있다. 이렇게하면 공백으로 분리되어
+        // class="i__scroll gotoUp"이 되고 css 속성을 추가로 가질 수 있게 됨.
+        $(".i__scroll__child")
+            .addClass("gotoUp")
+            .css("color", "rgb(206, 0, 144)");
+        $(".i__scroll__child")
+            .css("transition", "0.3s ease-in")
+            .css("transitionProperty", "color");
+        console.log($(".i__scroll__child").attr("class"));
+        // $(".i__scroll").css("cursor", "pointer");
+        $(".i__scroll__child").on('click', () => {
+            moveTop = 0;
+            moveScreen();
+        });
+    } else {
+        $(".i__scroll__child")
+        // gotoUp css속성클래스 제거
+            .removeClass("gotoUp")
+            // 클릭이벤트에 해당하는 이벤트리스너 제거
+            .off('click')
+            .css("color", "whitesmoke");
+    }
+});
+
+let logo__clickCount = 0;
+$(".home__logo").on('click', () => {
+    if (logo__clickCount % 2 == 0) {
+        $(".navbar > ul").slideDown(); //slideDown은 제이쿼리에서 제공하는 메소드임
+    } else {
+        $(".navbar > ul").slideUp();
+    }
+    logo__clickCount++;
+    console.log("클릭");
+});
+
+// 화면 로드 시 이벤트 function loading(){    $(".home__logo > img").fadeIn(1000);
+// $(".home__logo > img").css("fadeInUp"); }; 'KIM EUNYOUNG' 로고 클릭 시 메뉴바 나오도록 구현
+// alert($(".content:last").attr("class")); 버튼을 누르면 텍스트가 클립보드에 복사되도록 구현
+// $(".contact button").each(function(index){   console.log(index);
+// $(this).on("click mouseover", () => {     $(this).attr("style", "cursor:
+// pointer;");     console.log($(this).text()+"출력완");   });
+// $(this).trigger('click');   console.log($(this)); }); $(".contact
+// button").on("click", () => { }); $(".contact button").each(function(index){
+// console.log($(this).on("click", () => { console.log($(this).next().text());
+// copyToClipboard($(this).next().text());     document.execCommand('copy');
+// alert( '클립보드에 복사 되었습니다.' );   })); }); function copyToClipboard(element) {
+// $(element).next().text().   document.execCommand("copy");    $temp.remove();
+// } 버튼을 누르면 클립보드에 복사하기 구현
+$('.contact button').on('click', function (e) {
+    // a의 텍스트값을 가져옴
+    let text = $(this)
+        .next()
+        .html();
+    // 숨겨진 input박스 value값으로 text 변수 넣어줌.
+    $('#copytextbox').val(text);
+    // input박스 value를 선택
+    $('#copytextbox').select();
+    document.execCommand('copy');
+    alert("클립보드에 복사되었습니다.");
+});
+
+window.onscroll = () => {
+    moveTop = $(window).scrollTop();
+    // 전체 document 상에서 해당 객체의 top 값(top 라인의 위치값)을 반환 스크롤이 내려가면서 about 영역에 진입했을 경우.
+    let aboutTop = $("#aboutme")
+        .offset()
+        .top;
+    let skillsTop = $("#skills")
+        .offset()
+        .top;
+    let worksTop = $("#works")
+        .offset()
+        .top;
+    let etcTop = $("#etc")
+        .offset()
+        .top;
+    // top 값 출력해보기 console.log("aboutTop: "+aboutTop+", skillsTop: "+skillsTop+",
+    // worksTop: "+worksTop+", etcTop: "+etcTop)
+    $(".i__scroll__child").css("color", "whitesmoke");
+    console.log("moveTop: " + moveTop + ", aboutTop: " + aboutTop);
+    if (moveTop >= aboutTop && moveTop < skillsTop) {
+        console.log("aboutme 창 진입");
+        doVisible($(".aboutme__navbar li"));
+        doVisible($(".aboutme__mypic"));
+        doVisible($(".aboutme__text"));
+        doVisible($(".aboutme_history"));
+        doVisible($(".aboutme__body h1"));
+
+        $(".aboutme__navbar li").css("animation", "fadeInUp 1s ease");
+        $(".aboutme__mypic").css("animation", "fadeInLeft 1s ease");
+        $(".aboutme__text").css("animation", "fadeInRight 1s ease");
+        $(".aboutme_history").css("animation", "fadeIn 1s ease");
+        // $(".i__scroll__child").css("color","whitesmoke");
+        // colorChange($(".i__scroll__child"), "whitesmoke");
+    }
+    if (moveTop >= skillsTop - 100 && moveTop < worksTop) {
+        fillGauge();
+    }
+    if (moveTop >= worksTop - 100 && moveTop < etcTop) {
+        console.log("Works창 진입");
+        doVisible($(".works__gallery"));
+        $(".works__gallery").css("animation", "fadeInUp 1s ease");
+    }
+    if (moveTop >= etcTop + 60) {
+        console.log("마지막 페이지");
+        $(".i__scroll__child").css("color", "rgb(37, 37, 37");
+    }
+};
+
+function doHidden(tag) {
+    // $(tag).css("visibility", "hidden"); $(tag).css("opacity", 0);
+    // $(tag).css("transition", "1s ease"); $(tag).css("transitionProperty",
+    // "visibility, opacity");
+    tag.css("visibility", "hidden");
+    tag.css("opacity", 0);
+    tag.css("transition", "1s ease");
+    tag.css("transitionProperty", "visibility, opacity");
+};
+function doVisible(tag) {
+    // $(tag).css("visibility", "visible"); $(tag).css("opacity", 1);
+    // $(tag).css("transition", "1s ease"); $(tag).css("transitionProperty",
+    // "visibility, opacity");
+    tag.css("visibility", "visible");
+    tag.css("opacity", 1);
+    tag.css("transition", "1s ease");
+    tag.css("transitionProperty", "visibility, opacity");
+};
+
+function colorChange(tag, color) {
+    tag.css("transition", "3s ease");
+    tag.css("transitionProperty", "color");
+    tag.css("color", color);
+};
+
+// percent만큼 게이지가 올라가도록 이벤트 구현하는 함수
+function fillGauge() {
+    $(".percent").each((index) => {
+        // console.log(index+$(".percent").eq(index).text());
+        // console.log($(".percent").eq(index).text().includes(prcnt));
+        // console.log(Number($(".percent").eq(index).text().substr(0,2))); 제이쿼리 객체의 텍스트
+        // 노드에 입력된 숫자를 읽어와 그만큼 게이지를 채우도록 구현
+        let percent = Number($(".percent").eq(index).text().substr(0, 2));
+        let degree = percent / 200;
+        // console.log(degree);
+        let str = "rotate(" + degree + "turn)";
+        // console.log("percent===> "+percent+", degree===> "+degree+", str===> "+str);
+        $(".gauge__c")
+            .eq(index)
+            .css("transform", str);
+        // $(".gauge__c").eq(index).css("transform", "rotate(30deg)");
+        // $(".gauge__c").eq(index).css("transform", "rotate(0.5turn)");
+    });
+}
+
+// 프로젝트 이미지에 마우스 오버 시(hover) 이벤트 구현
+$(".project__hover").each(function (index) {
+    $(".project__hover")
+        .eq(index)
+        .on('mouseover', () => {
+            $(".project__hover img")
+                .eq(index)
+                .css("filter", "brightness(20%)")
+                .css("transform", "scale(1.05)");
+            // console.log("마우스 오버"+$(".project__hover p").eq(index).text());
+            doVisible($(".project__hover p").eq(index));
+        });
+    $(".project__hover")
+        .eq(index)
+        .on('mouseout', () => {
+            $(".project__hover img")
+                .css("filter", "brightness(100%)")
+                .css("transform", "scale(1.05)")
+            doHidden($(".project__hover p").eq(index));
+        });
+
+});
+
+        </script>
+    </head>
+    <body>
+        <!-- 스크롤값을 확인하기 위한 임시 태그 -->
+        <!-- <span class="scrollNumCheck" style="position:fixed; width:100vw;
+        text-align: center;">스크롤 수</span> -->
+        <!-- Home -->
+        <section class="content home" id="home">
+            <div class="bg__img">
+                <img src="images/effel.png" alt="에펠탑">
+            </div>
+            <input id="copytextbox"/>
+            <div class="home__logo">
+                <div class="i__click">
+                    <img src="images/mouseclick_.gif" alt="클릭">
+                </div>
+                <img src="images/main_logo.png" alt="김은영">
+            </div>
+            <!-- menu & baseline -->
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a class="li__aboutme" href="#aboutme">About Me</a>
+                    </li>
+                    <li>
+                        <a class="li__skills" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="li__works" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a class="li__etc" href="#etc">Etc.</a>
+                    </li>
+                </ul>
+                <!-- <ul> <li class="li__aboutme"> <p name="aboutme">AboutMe</p> </li> <li
+                class="li__skills"> <p name="skills">Skills</p> </li> <li class="li__works"> <p
+                name="works">Works</p> </li> <li class="li__etc"> <p name="etc">Etc.</p> </li>
+                </ul> -->
+                <hr class="baseline"/>
+            </div>
+            <!-- contact -->
+            <div class="contact">
+                <p class="title">↓ click the button to copy it</p>
+                <div class="email">
+                    <button>E-Mail</button>
+                    <p class="pcopy">snu9451@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <button>Phone</button>
+                    <p class="pcopy">+82 10-8082-8353</p>
+                </div>
+            </div>
+        </section>
+        <!-- AboutMe -->
+        <section class="content aboutme" id="aboutme">
+            <div class="aboutme__header">
+                <ul class="aboutme__navbar">
+                    <li>
+                        <a class="first__a" href="#aboutme">About Me</a>
+                    </li>
+                    <li>
+                        <a class="second__a" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="third__a" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a class="fourth__a" href="#etc">Etc.</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="aboutme__body body__padding">
+                <h1>Back-End 개발자 <eun>김은영</eun>입니다.</h1><br>
+                <div class="aboutme__mypic_and_mytext">
+                    <div class="aboutme__mypic">
+                        <img src="images/mypic.jpg" alt="mypic">
+                    </div>
+                    <div class="aboutme__text" style="z-index: 5;">
+                        <p style="margin:0; font-size: 1.2vw; letter-spacing: 2px; line-height: 2vw;">
+                          C언어를 이용하여 진행되는 전공수업을 들으며 프로그래밍에 대한 관심이 생겼고, 그 관심은 졸업 후에도 이어져 백엔드 개발자라는 꿈을 갖게 되었습니다.
+                          6개월 간 진행된 국비지원교육에서 여러 팀프로젝트를 경험하였고, 그 경험을 통해 문제해결능력, 협업능력, 실무적인 노하우 등을 많이 익힐 수 있었습니다.<br/><br/>
+                          - 저는 <eun><u>API 활용 능력</u>을 갖추었으며 <u>표준</u>과 <u>약속</u>을 중요시하는</eun> 개발자입니다.<br/>
+                          - 저는 <eun>한 번 시작한 일은 <u>끝내고자 하는 집념</u>있는</eun> 개발자입니다.<br/>
+                          - 저는 <eun>다른 사람을 잘 돕고, 또 다른 사람의 도움도 잘 받는 <u>협업</u>하는</eun> 개발자입니다.<br/><br/>
+                        </p>
+                        <p style="text-align: right; margin:0; font-size: 1.3vw; letter-spacing: 2px; line-height: 2vw;">매일매일 더 나은 개발자가 되어가는 <eun>김은영</eun>입니다.</p>
+                    </div>
+                </div>
+                <div class="aboutme_history">
+                    <div class="kosmo">
+                        <img src="images/kosmo_logo.png" alt="코스모로고" style="height: 3vw;">
+                        <p><eun>한국소프트웨어인재개발원 수료</eun><br>2021. 02. 03 ~ 2021. 08. 04</p>
+                    </div>
+                    <div class="univ">
+                        <img src="images/symbol-mark.png" alt="학교로고" style="height: 3vw;">
+                        <p><eun>이화여자대학교 졸업</eun><br>2015. 03 ~ 2021. 08</p>
+                    </div>
+                    <div class="ncs">
+                        <img src="images/ncs.png" alt="NCS로고" style="height: 3vw;">
+                        <p><eun>정보처리기사 자격증 취득</eun><br>2021. 06. 02</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutme__footer"></div>
+        </section>
+        <!-- Skills -->
+        <section class="content skills" id="skills">
+            <div class="skills__header">
+                <ul class="skills__navbar">
+                    <li>
+                        <a class="first__a" href="#aboutme">About Me</a>
+                    </li>
+                    <li>
+                        <a class="second__a" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="third__a" href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a class="fourth__a" href="#etc">Etc.</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 게이지 -->
+            <div class="skills__gauge__main">
+                <div class="skills__gauge__one">
+                    <div class="skills__gauge__lang">
+                        <div class="skills__gauge__java">
+                            <div class="gauge__bar">
+                                <div class="gauge__a"></div>
+                                <div class="gauge__b"></div>
+                                <div class="gauge__c"></div>
+                                <div class="gauge___data">
+                                    <h1 class="percent">90%<br/>JAVA</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>가장 <eunw>자신있게</eunw> 생각하는 언어이며, JAVA의 근간이 되는 <eunw>OOP 사상</eunw>을 준수하는 코딩을 지향합니다.</h3>
+                    </div>
+                    <div class="skills__gauge__lang">
+                        <div class="skills__gauge__hcj">
+                            <div class="gauge__bar">
+                                <div class="gauge__a"></div>
+                                <div class="gauge__b"></div>
+                                <div class="gauge__c"></div>
+                                <div class="gauge___data">
+                                    <h1 class="percent">80%<br/>HTML/CSS/JS</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h3><eunw>HTML, CSS, JS 및 jQuery</eunw>를 <eunw>연결</eunw>하여 지금 보고 계신 웹페이지를 구현하였습니다.</h3>
+                    </div>
+                    <div class="skills__gauge__lang">
+                        <div class="skills__gauge__sql">
+                            <div class="gauge__bar">
+                                <div class="gauge__a"></div>
+                                <div class="gauge__b"></div>
+                                <div class="gauge__c"></div>
+                                <div class="gauge___data">
+                                    <h1 class="percent">85%<br/>SQL</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h3><eunw>효율적</eunw>인 데이터 조회가 가능하도록 쿼리문을 작성하며, <eunw>프로시저 및 트리거</eunw>를 이용한 <eunw>트랜잭션 처리</eunw>가 가능합니다.</h3>
+                    </div>
+                </div>
+
+                <div class="skills__gauge__two">
+                    <div class="skills__gauge__lang">
+                        <div class="skills__gauge__spring">
+                            <div class="gauge__bar">
+                                <div class="gauge__a"></div>
+                                <div class="gauge__b"></div>
+                                <div class="gauge__c"></div>
+                                <div class="gauge___data">
+                                    <h1 class="percent">80%<br/>SPRING</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>POJO에서 <eunw>SPRING/SPRING BOOT</eunw>로의 <eunw>이관작업</eunw>을 진행하였습니다.</h3>
+                    </div>
+                    <div class="skills__gauge__lang">
+                        <div class="skills__gauge__git">
+                            <div class="gauge__bar">
+                                <div class="gauge__a"></div>
+                                <div class="gauge__b"></div>
+                                <div class="gauge__c"></div>
+                                <div class="gauge___data">
+                                    <h1 class="percent">80%<br/>GIT</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <h3><eunw>협업</eunw>과 <eunw>형상관리</eunw>를 위한 Tool로 <eunw>git</eunw>을 사용하였습니다.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="skills__gauge__logos">
+                <img src="images/logos.png" alt="로고들">
+            </div>
+        </div>
+    </section>
+    <!-- Works -->
+    <section class="content works" id="works">
+        <div class="works__header">
+            <ul class="works__navbar">
+                <li>
+                    <a class="first__a" href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a class="second__a" href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a class="third__a" href="#works">Works</a>
+                </li>
+                <li>
+                    <a class="fourth__a" href="#etc">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <div class="works__body">
+            <div class="works__headtext">
+                <h1>제가 진행한 프로젝트입니다.</h1>
+                <p>* 클릭하시면 해당하는 git 페이지로 이동합니다.</p>
+            </div>
+            <div class="works__gallery">
+                <div class="first__project project__hover">
+                  <p>2021. 03<br/>JAVA와 jdbc를 이용해 구현한<br/><b>도서관리시스템</b></p>
+                  <img onclick="javascript:location.href='https://github.com/snu9451'; window.open('about:_blank');" src="images/bookshelves_.png" alt="도서관리">
+                </div>
+                <div class="second__project lower project__hover">
+                  <p>2021. 04<br/>MyBatis와 소켓통신을 이용해 구현한<br/><b>Room관리시스템</b></p>
+                  <img onclick="javascript:location.href='https://github.com/kim-heetae/KosmoSketch.git';" src="images/room_door_one.jpg" alt="방관리">
+                </div>
+                <div class="third__project project__hover">
+                  <p>2021. 05<br/>html, css, javascript<br/>그리고<br/>JSP/Servlet의 만남<br/><b>포트폴리오</b></p>
+                  <img onclick="javascript:location.href='https://github.com/snu9451';" src="images/papers.png" alt="">
+                </div>
+                <div class="fourth__project lower project__hover">
+                  <p>2021. 06 ~ 2021. 07<br/>OO로 구현한<br/><b>파이널 프로젝트명</b></p>
+                    <img onclick="javascript:location.href='https://github.com/snu9451';" src="images/store.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Etc. -->
+    <section class="content etc" id="etc">
+        <div class="etc__header">
+            <ul class="etc__navbar">
+                <li>
+                    <a class="first__a" href="#aboutme">About Me</a>
+                </li>
+                <li>
+                    <a class="second__a" href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a class="third__a" href="#works">Works</a>
+                </li>
+                <li>
+                    <a class="fourth__a" href="#etc">Etc.</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- scroll > infinite motion -->
+    <div class="i__scroll">
+        <div class="i__scroll__child">
+            <p>아래로 스크롤</p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <div class="footer__header">
+                <h1 style="color: rgb(37, 37, 37); margin: 0; padding: 20px;">GET IN TOUCH!</h1>
+            </div>
+            <div class="footer__body">
+                <div class="footer__form__wrapper">
+                    <form action="#" method="post" class="footer__form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your E-Mail">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="" cols="30" rows="7" class="form-control" placeholder="Comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="form__submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <nav class="icons">
+                <ul class="footer__ul">
+                    <li>
+                        <a target="_blank" href="mailto:snu9451@gmail.com">
+                            <i class="far fa-envelope email"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/snu9451">
+                            <i class="fab fa-github git"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="tel:+821080828353">
+                            <i class="fas fa-mobile-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="copyright">
+          <p>Copyright © EunyoungKim . All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
